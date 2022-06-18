@@ -4,39 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Common Events</title>
+    <title>Create Comment Box</title>
 </head>
 <body>
-    <p id="my-name"></p>
-    <input id="input-field" type="text" placeholder="Write your name">
-    <button id="name-btn">Push Your Name</button>
-    <button onclick="usingFunction()">Just Function</button>
-    <button id="direct-addEventListener">Direct addEventListener</button>
-    <script>
-        document.getElementById('name-btn').addEventListener('click', function(){
-            const inputField = document.getElementById('input-field');
-            const myFieldName = inputField.value;
-            const myName = document.getElementById('my-name');
-            myName.innerText = myFieldName;
-            inputField.value = '';
-        })
-
-        function usingFunction(){
-            const myName = document.getElementById('my-name');
-            myName.style.backgroundColor = 'gold';
-            myName.style.height = '200px';
-            myName.style.width = '400px';
-            myName.style.lineHeight = '200px'
-            myName.style.textAlign = 'center';
-            myName.style.fontSize = '30px';
-            myName.style.fontWeight = '800';  
-        }
-
-        document.getElementById('direct-addEventListener').addEventListener('click', function(){
-            const myName = document.getElementById('my-name');
-            myName.style.border = '5px solid cyan';
-            myName.style.borderRadius = '5px';
-        })
-    </script>
+    <div id="container">
+        <p>1.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quisquam temporibus fuga pariatur alias ab amet, perferendis ducimus corrupti beatae.</p>
+        <p>2.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quisquam temporibus fuga pariatur alias ab amet, perferendis ducimus corrupti beatae.</p>
+    </div>
+    <div>
+        <textarea id="user-comment-field" cols="30" rows="10"></textarea><br>
+        <button id="post-comment-btn">Post Comment</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
